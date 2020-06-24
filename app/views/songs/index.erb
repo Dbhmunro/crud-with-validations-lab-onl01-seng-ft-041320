@@ -1,0 +1,7 @@
+<h1>All Songs</h1>
+
+<tbody>
+<% @songs.each do |song| %>
+    <tr><%= song.title %> <%= button_to "Delete #{song.title}", song_path(song), methd: :delete %></tr>
+<% end %>
+</tbody>
